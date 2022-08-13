@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body {
+    background-color: skyblue;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quiz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #040975;
+    width: 580px;
+    height: 314px;
+    box-sizing: border-box;
+    padding: 45px 40px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 7px 20px #04097591;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quiz-content {
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-container {
+    width: 60%;
+    padding-right: 55px;
 }
 
-.App-link {
-  color: #61dafb;
+.right-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    padding: 11px;
+    border: 4px solid #87cfebab;
+    border-radius: 9px;
+    margin: 5px 0;
+    background-color: transparent;
+    color: #87cfebc5;
+    font-weight: 600;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.question-num {
+    font-size: 2.3rem;
+}
+
+.question-num span {
+    font-size: 1.4rem;
+}
+
+.question {
+    font-weight: 300;
+    font-size: 1.45rem;
+}
+
+.quiz-results {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .quiz-container {
+        width: 350px;
+        height: 475px;
+    }
+
+    .quiz-content {
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+    button:hover {
+        transform: none;
+    }
+    button:active {
+        transform: scale(1.05);
+    }
+
 }
